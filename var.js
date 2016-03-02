@@ -17,7 +17,7 @@ function getRand(min,max) {
 }
 
 var append = function(){
-	fs.appendFile('dump.txt', getRand(1,9999)+"\n", 'utf8', function(err)
+	fs.appendFile('dump.txt', getRand(1,9999)+"", 'utf8', function(err)
 	{
 	if(err) throw err;
 	console.log('test');
@@ -32,5 +32,5 @@ server.on('request', function(req, res) {
   res.end(text);
 });
 });
-setInterval(append,1000);
+setInterval(append,10);
 
